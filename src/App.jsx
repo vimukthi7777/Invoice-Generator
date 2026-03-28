@@ -1,8 +1,25 @@
-import React from 'react'
+import React from 'react';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {Toaster} from "react-hot-toast";
+import MenuBar from './components/MenuBar';
+import LandingPage from './pages/LandingPage/LandingPage';
+import Dashboard from './pages/Dashboard';
+import MainPage from './pages/MainPage';
+import PreviewPage from './pages/PreviewPage';
+
 
 const App = () => {
   return (
-    <div className='container'>Application is started</div>
+   <BrowserRouter>
+    <MenuBar/>
+    <Toaster/>
+    <Routes>
+      <Route path="/" element={<LandingPage/>}/>
+      <Route path="/dashboard" element={<Dashboard/>}/>
+      <Route path="/generate" element={<MainPage/>}/>
+      <Route path="/preview" element={<PreviewPage/>}/>
+    </Routes>
+   </BrowserRouter>
   )
 }
 
