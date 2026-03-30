@@ -23,3 +23,19 @@
 .invoiceform select:focus {
   box-shadow: none !important;
 }
+
+.nav-btn {
+  background-color: #014BAA;
+  color: #F8F3F0;
+  border: none;
+  padding: 0.375rem 0.75rem; /* Bootstrap default */
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #013a86; /* slightly darker */
+  color: #F8F3F0;
+}
