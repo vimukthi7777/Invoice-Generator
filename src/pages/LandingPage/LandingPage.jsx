@@ -1,6 +1,8 @@
 import React from 'react';
 import './LandingPage.css';
 import {assets} from "../../assets/assets.js";
+import Logo from "../../components/Logo.jsx";
+import { Facebook, Github, Twitter } from 'lucide-react';
 
 const LandingPage = () => {
   return (
@@ -38,9 +40,9 @@ const LandingPage = () => {
                         {/* Step 1 Card */}
                         <div className="col-md-6 col-lg-3 d-flex">
                             <div className="card h-100 shadow-sm border-0 text-center flex-fill">
-                                <div className="card-img-top-container d-flex align-items-center justify-content-center p-4 bg-primary-soft">
+                                <div className="card-img-top-container d-flex align-items-center justify-content-center p-4 " style={{ backgroundColor: "#E6EFFA" }}>
                                     <img
-                                        src="https://placehold.co/150x150/0D6EFD/FFFFFF?text=1&font=montserrat"
+                                        src="https://placehold.co/150x150/014BAA/FFFFFF?text=1&font=montserrat"
                                         className="rounded-circle"
                                         alt="Enter Invoice Details"
                                         onError={(e) => { e.target.onerror = null; e.target.src='https://placehold.co/150x150/E0E0E0/000000?text=Error'; }}
@@ -58,9 +60,9 @@ const LandingPage = () => {
                         {/* Step 2 Card */}
                         <div className="col-md-6 col-lg-3 d-flex">
                             <div className="card h-100 shadow-sm border-0 text-center flex-fill">
-                                <div className="card-img-top-container d-flex align-items-center justify-content-center p-4 bg-success-soft">
+                                <div className="card-img-top-container d-flex align-items-center justify-content-center p-4" style={{ backgroundColor: "#FFF4CC" }}>
                                     <img
-                                        src="https://placehold.co/150x150/198754/FFFFFF?text=2&font=montserrat"
+                                        src="https://placehold.co/150x150/FFC107/FFFFFF?text=2&font=montserrat"
                                         className="rounded-circle"
                                         alt="Choose Template"
                                         onError={(e) => { e.target.onerror = null; e.target.src='https://placehold.co/150x150/E0E0E0/000000?text=Error'; }}
@@ -78,9 +80,9 @@ const LandingPage = () => {
                         {/* Step 3 Card */}
                         <div className="col-md-6 col-lg-3 d-flex">
                             <div className="card h-100 shadow-sm border-0 text-center flex-fill">
-                                <div className="card-img-top-container d-flex align-items-center justify-content-center p-4 bg-warning-soft">
+                                <div className="card-img-top-container d-flex align-items-center justify-content-center p-4" style={{ backgroundColor: "#F8F3F0" }}>
                                     <img
-                                        src="https://placehold.co/150x150/FFC107/000000?text=3&font=montserrat"
+                                        src="https://placehold.co/150x150/014BAA/FFFFFF?text=3&font=montserrat"
                                         className="rounded-circle"
                                         alt="Preview Invoice"
                                         onError={(e) => { e.target.onerror = null; e.target.src='https://placehold.co/150x150/E0E0E0/000000?text=Error'; }}
@@ -98,7 +100,7 @@ const LandingPage = () => {
                         {/* Step 4 Card */}
                         <div className="col-md-6 col-lg-3 d-flex">
                             <div className="card h-100 shadow-sm border-0 text-center flex-fill">
-                                <div className="card-img-top-container d-flex align-items-center justify-content-center p-4 bg-info-soft">
+                                <div className="card-img-top-container d-flex align-items-center justify-content-center p-4" style={{ backgroundColor: "#D6E4F5" }}>
                                     <img
                                         src="https://placehold.co/150x150/0DCAF0/FFFFFF?text=4&font=montserrat"
                                         className="rounded-circle"
@@ -215,6 +217,48 @@ const LandingPage = () => {
                     </div>
                 </div>
             </section>
+
+            
+            {/* Call to Action Section*/}
+            <section id="generate-invoice" className="py-5 text-center text-white" style={{ backgroundColor: "#014BAA" }}>
+                <div className="container">
+                    <h2 className="display-5 fw-bold mb-3">Ready to Streamline Your Invoicing?</h2>
+                    <p className="lead mb-4 mx-auto" style={{ maxWidth: '600px' }}>
+                        Join thousands of freelancers and small businesses who trust QuickInvoice.
+                        Start creating professional invoices today – its fast, easy, and effective!
+                    </p>
+                    <button className="btn btn-lg btn-warning fw-bold rounded-pill px-5 py-3">
+                        Start Generating Invoices Now
+                    </button>
+                    <p className="mt-3 small">
+                        (This will lead to the invoice generation interface)
+                    </p>
+                </div>
+            </section>
+
+            
+            {/* Footer: Copyright and social media links */}
+            <footer className="py-5 bg-dark text-white-50">
+                <div className="container text-center">
+                    <Logo />
+                    <p className="text-white fw-bold mt-2">V-Invoice</p>
+                    <p className="mb-0">
+                        &copy; {new Date().getFullYear()} QuickInvoice. All Rights Reserved.
+                    </p>
+                    <p className="mb-0 small">
+                        Crafted with <i className="bi bi-heart-fill text-danger"></i> for freelancers and small businesses.
+                    </p>
+                    <p className="mb-0 small">
+                        Developed by <i className="bi bi-heart-fill text-danger"></i> Sahan Vimukthi.
+                    </p>
+                    <p className="mt-2">
+                        {/* Placeholder social media links */}
+                        <a href="#" className="text-white-50 me-2"><Twitter/></a>
+                        <a href="#" className="text-white-50 me-2"><Facebook/></a>
+                        <a href="#" className="text-white-50"><Github/></a>
+                    </p>
+                </div>
+            </footer>
 
     </>
   )

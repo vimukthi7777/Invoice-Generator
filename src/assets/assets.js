@@ -8,7 +8,7 @@ import landing1 from './Landing1.png';
 import landing2 from './Landing2.png';
 import landing3 from './Landing3.png';
 import landing4 from './Landing4.png';
-import uploadimg from './uploadA.svg'
+import upload_area from './upload_area.png'
 
 
 export const assets = {
@@ -22,6 +22,6 @@ landing1,
 landing2,
 landing3,
 landing4,
-uploadimg,
+upload_area,
 
 }
