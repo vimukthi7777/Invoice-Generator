@@ -5,7 +5,7 @@ import MenuBar from './components/MenuBar';
 import LandingPage from './pages/LandingPage/LandingPage';
 import Dashboard from './pages/Dashboard';
 import MainPage from './pages/MainPage';
-import PreviewPage from './pages/PreviewPage';
+import PreviewPage from './components/PreviewPage';
 
 
 const App = () => {

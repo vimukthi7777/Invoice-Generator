@@ -45,8 +45,7 @@ const InvoiceForm = () => {
 
   const calculateTotals = () => {
     const subtotal = invoiceData.items.reduce(
-      (sum, item) => sum + (item.total || 0),
-      0
+      (sum, item) => sum + (item.total || 0),0
     );
     const taxRate = Number(invoiceData.tax || 0);
     const taxAmount = (subtotal * taxRate) / 100;
@@ -71,7 +70,7 @@ const InvoiceForm = () => {
   };
 
   useEffect(() => {
-    // Only generate if it's not already set (for example, editing an existing invoice)
+    // invoice num
     if (!invoiceData.invoice.number) {
       const randomNumber = `INV-${Math.floor(100000 + Math.random() * 900000)}`;
       setInvoiceData((prev) => ({
@@ -432,6 +431,7 @@ const InvoiceForm = () => {
           ></textarea>
         </div>
       </div>
+
     </div>
   );
 };
